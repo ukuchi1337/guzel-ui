@@ -1,6 +1,6 @@
 {
   "$schema": "https://unpkg.com/@changesets/config@3.1.1/schema.json",
-  "changelog": ["@changesets/changelog", { "repo": "https://github.com/ukuchi1337/guzel-ui.git" }],
+  "changelog": ["@changesets/cli/changelog", { "repo": "https://github.com/ukuchi1337/guzel-ui.git" }],
   "commit": false,
   "fixed": [],
   "linked": [],

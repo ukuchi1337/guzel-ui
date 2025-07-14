@@ -48,4 +48,23 @@ export default defineConfig({
       },
     ],
   },
+  build: {
+    lib: {
+      entry: path.resolve(__dirname, 'src/index.ts'),
+      name: 'GuzelUI',
+      fileName: 'index',
+      formats: ['es'], // можно добавить 'cjs' при желании
+    },
+    rollupOptions: {
+      // важно!
+      external: (id) => /^react($|\/)/.test(id),
+      output: {
+        globals: {
+          react: 'React',
+          'react-dom': 'ReactDOM',
+        },
+      },
+    },
+    outDir: 'dist',
+  },
 });
